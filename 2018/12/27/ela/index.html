@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://fotoforensic.com/img/books-resave-ela.png">
 <meta property="og:image" content="http://fotoforensic.com/img/books-edited.jpg">
 <meta property="og:image" content="http://fotoforensic.com/img/books-edited-ela.png">
-<meta property="og:updated_time" content="2018-12-27T09:53:50.214Z">
+<meta property="og:updated_time" content="2018-12-27T09:58:26.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ela">
 <meta name="twitter:description" content="ELAELA 全称：Error Level Analysis ，汉译为“错误级别分析”或者叫“误差分析”。通过检测特定压缩比率重新绘制图片后造成的误差分布，可用于识别JPEG图片的压缩。 维基百科：ELA是对JPEG有损压缩的数字数据中的压缩影片进行分析。ELA技术可参考 Neal Krawetz先生 在其 07年论文 中的详细介绍。 原理把图片分割成很多8x8个正方形中的1像素点，对每一个小块进">
@@ -322,26 +322,38 @@
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ol>
 <li><a href="http://www.errorlevelanalysis.com" target="_blank" rel="noopener">http://www.errorlevelanalysis.com</a> 是专门做ELA分析的网站，可惜现在已经关闭了。但还是保留了一个示例作为参考(请留意嘴唇、衬衫以及眼睛，这些部分与其周围因素是有所不同的，根据推测是经过修改的，区域变亮)：<br><img src="http://www.errorlevelanalysis.com/576ff2a.jpg" alt=""><br><img src="http://www.errorlevelanalysis.com/576ff2a_enhanced.jpg" alt=""></li>
 <li><a href="https://29a.ch" target="_blank" rel="noopener">Jonas Wagner</a> 的测试(可以看到假的部分图片明显高亮于其周围区域)：<br><img src="https://29a.ch/sandbox/2012/imageerrorlevelanalysis/fake_screenshot.jpg" alt=""><br><img src="https://29a.ch/sandbox/2012/imageerrorlevelanalysis/original_screenshot.jpg" alt=""></li>
-<li>原始照片在重新保存期间具有高度的变化（高ELA值）。后续的任何操作都将降低ELA值，产生较暗的ELA结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原图</span><br></pre></td></tr></table></figure>
-</li>
+<li>原始照片在重新保存期间具有高度的变化（高ELA值）。后续的任何操作都将降低ELA值，产生较暗的ELA结果：</li>
 </ol>
+<blockquote>
+<p>原图</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-orig.jpg" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原ELA</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>原ELA</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-orig-ela.png" alt=""></p>
-<p>重新保存一次：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二次保存图</span><br></pre></td></tr></table></figure></p>
+<p>重新保存一次：</p>
+<blockquote>
+<p>二次保存图</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-resave.jpg" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二次保存后ELA</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>二次保存后ELA</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-resave-ela.png" alt=""></p>
-<p>修改图片内容(复制了绿皮书及放置了恐龙玩具)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改后图片</span><br></pre></td></tr></table></figure></p>
+<p>修改图片内容(复制了绿皮书及放置了恐龙玩具)：</p>
+<blockquote>
+<p>修改后图片</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-edited.jpg" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">修改后ELA</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改后ELA</p>
+</blockquote>
 <p><img src="http://fotoforensic.com/img/books-edited-ela.png" alt=""></p>
 <h3 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h3><ul>
 <li>ELA只是一种算法，由于其分析压缩的性质，无损压缩的数据（如PNG图片）及图片色彩减少到256色以下(转换为GIF图)，ELA 是没有作用的。</li>
 <li>如果图片被重新保存多次，那么它可能完全处于最小错误级。在这种情况下，ELA将显示黑色图片，且不能使用该算法来识别修改。<br>目前这个算法并不是完全可靠的，尤其是经过多次压缩的图片。</li>
 </ul>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p> <a href="http://www.hackerfactor.com/" target="_blank" rel="noopener">Neal Krawetz先生</a> 的 <a href="https://www.wired.com/images_blogs/threatlevel/files/bh-usa-07-krawetz.pdf" target="_blank" rel="noopener">演讲文档</a><br><a href="https://29a.ch/" target="_blank" rel="noopener">https://29a.ch/</a> 也有其他关于图片处理的技术，比如：<br>自动化图片裁剪主题区域(非暴力裁剪中心区域)的 smartcrop.js <a href="https://29a.ch/2014/04/03/smartcrop-content-aware-image-cropping" target="_blank" rel="noopener">介绍页</a> | <a href="https://29a.ch/sandbox/2014/smartcrop/examples/testsuite.html" target="_blank" rel="noopener">示例页</a> | <a href="">测试页</a> | <a href="https://github.com/jwagner/smartcrop.js/" target="_blank" rel="noopener">GitHub</a><br>图片滤镜 Film Emulator<br><a href="https://29a.ch/film-emulator/" target="_blank" rel="noopener">测试页</a> | <a href="https://github.com/jwagner/analog-film-emulator" target="_blank" rel="noopener">GitHub</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">参考资料：</span><br><span class="line">· http://www.hackerfactor.com/</span><br><span class="line">· http://www.wired.com/images_blogs/threatlevel/files/bh-usa-07-krawetz.pdf</span><br><span class="line">· http://www.errorlevelanalysis.com/</span><br><span class="line">· http://fotoforensic.com/tutorial-ela.php</span><br><span class="line">· https://29a.ch/</span><br><span class="line">· https://en.wikipedia.org/wiki/Error_level_analysis</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -488,7 +500,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ELA"><span class="nav-number">1.</span> <span class="nav-text">ELA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局限性"><span class="nav-number">4.</span> <span class="nav-text">局限性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拓展"><span class="nav-number">5.</span> <span class="nav-text">拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ELA"><span class="nav-number">1.</span> <span class="nav-text">ELA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局限性"><span class="nav-number">4.</span> <span class="nav-text">局限性</span></a></li></ol></div>
             
 
           </div>
